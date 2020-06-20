@@ -65,8 +65,13 @@ class Matrix {
     return true;
   }
 
-  get SumMult(val){
-    
+  get SumMultThr () {
+    let modl = 0;
+    let one = this.matrix.reduce( (s, el) => s.concat(el) ) 
+    for (let el of one) {
+      if (el > 0 && el % 3 == 0) modl += el;
+    }
+    return modl
   }
   
 }
@@ -75,3 +80,4 @@ const mat = new Matrix(5, 5);
 console.log(mat.matrix);   // Matrix
 console.log(mat.bgElem()); // Highest elem
 console.log(mat.smElem()); // Smolest elem
+console.log(mat.SumMultThr) // Sum multiplie thr
