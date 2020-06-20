@@ -64,6 +64,11 @@ class Matrix {
     );
     return true;
   }
+
+  get SumMult(val){
+    
+  }
+  
 }
 
 const mat = new Matrix(5, 5);
